@@ -15,6 +15,9 @@
   providing a centralized "Master Fleet Dispatch Hub" for global environmental
   monitoring and cleanup coordination.
 
+  🌐 Live Deployment: https://marine-debris-detection-1.vercel.app/
+  🖥️ Source Code:    https://github.com/diyanezwaran/marine-debris-detection-1
+
   "We store processed results in MongoDB Atlas and Cloudinary for scalable
    data persistence and advanced geospatial fleet analytics."
 
@@ -73,6 +76,7 @@
   Tensor hackathon/
   ├── main.py              ← FastAPI backend (core API server)
   ├── index.html           ← High-end Multi-Scan Frontend (primary entry)
+  ├── ocean_app.py         ← Unified Streamlit Application
   ├── ocean.mp4            ← Cinematic background video
   ├── yolov8n.pt           ← YOLOv8 base model weights
   ├── static/              ← Local generated results cache (heatmaps/GeoJSON)
@@ -85,21 +89,21 @@
 
   1. Install Core Dependencies:
      pip install fastapi uvicorn python-multipart opencv-python ultralytics
-     pip install folium Pillow numpy pymongo cloudinary
+     pip install folium Pillow numpy pymongo cloudinary streamlit
 
   2. Ignite the Fleet API Server:
      python main.py
      → [INFO] API operational on http://127.0.0.1:8008
 
   3. Launch the Dispatch Dashboard:
-     Open 'index.html' directly in your browser.
-     (Note: Ensure background video 'ocean.mp4' is in the root directory).
+     Open 'index.html' directly in your browser or use the Streamlit app:
+     streamlit run ocean_app.py
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   OPERATIONAL GUIDELINES
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  1. Click "＋ Add Another Satellite Feed Slot" for batch analysis.
+  1. Click "+ Add Another Satellite Feed Slot" for batch analysis.
   2. Select satellite imagery and assign unique Latitude/Longitude.
   3. Click "Execute Multi-Sector Aerial Scan".
   4. View the "Master Fleet Dispatch Ranking" at the top to identify the 

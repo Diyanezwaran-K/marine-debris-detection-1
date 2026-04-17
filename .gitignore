@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+
+# Data and Models
+dataset/
+converted_dataset/
+pseudo_dataset/
+synthetic_images/
+*.pt
+*.jpg
+*.png
+*.mp4
+
+# Results/Cache
+static/
+heatmap.html
+result_b64.txt
+export_*.geojson
+heatmap_*.html
+input_*.jpg
+result_*.jpg
+
+# OS
+.DS_Store
+Thumbs.db
